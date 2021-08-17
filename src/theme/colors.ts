@@ -12,5 +12,4 @@ export const appColors = {
 export const darkModeColors = {
   font: commonColors.white,
   background: "#232B32",
-
 };
