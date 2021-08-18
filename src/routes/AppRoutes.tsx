@@ -14,7 +14,7 @@ import Header from "../components/common/Header/Header";
 const AppRoutes = () => {
   const { isAuthenticated, isLoading } = useAuth0();
   const classes = useStyles();
-  const example = () => <div>Example</div>;
+  const CodeEditor = () => <div>Code Editor App</div>;
   if (isLoading) {
     return <Loading />;
   }
@@ -23,7 +23,9 @@ const AppRoutes = () => {
       <Header />
       <div className={classes.page}>
         <Switch>
-          <ProtectedRoute exact path={routes.codeEditor} component={example} />
+          <ProtectedRoute exact path={routes.codeEditor}>
+            {CodeEditor}
+          </ProtectedRoute>
           <Route exact path={routes.home}>
             {isAuthenticated ? (
               <Redirect to={routes.codeEditor} />
