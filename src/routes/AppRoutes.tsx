@@ -6,6 +6,7 @@ import routes from "./routes";
 import { useAuth0 } from "@auth0/auth0-react";
 import Loading from "../components/common/Loading/Loading";
 import Header from "../components/common/Header/Header";
+import Home from "../pages/Home/Home";
 
 // bug => ./src/App.tsx
 // Cannot find file: 'AppRoutes.ts' does not match the corresponding name on disk: '.\src\routes\routes.ts'.
@@ -27,11 +28,7 @@ const AppRoutes = () => {
             {CodeEditor}
           </ProtectedRoute>
           <Route exact path={routes.home}>
-            {isAuthenticated ? (
-              <Redirect to={routes.codeEditor} />
-            ) : (
-              <div>Home</div>
-            )}
+            {isAuthenticated ? <Redirect to={routes.codeEditor} /> : <Home />}
           </Route>
         </Switch>
       </div>
