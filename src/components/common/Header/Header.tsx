@@ -5,6 +5,8 @@ import { useAppDispatch, useAppSelector } from "../../../store/hooks";
 import { toggleDarkMode } from "../../../store/dark-mode/reducer";
 import DarkModeIcon from "@material-ui/icons/Brightness2";
 import { Switch } from "@material-ui/core";
+import UnauthenticatedButtons from "./UnauthenticatedButtons";
+import AuthenticatedButtons from "./AuthenticatedButtons";
 
 const Header = () => {
   const { isAuthenticated } = useAuth0();
@@ -27,9 +29,9 @@ const Header = () => {
           checked={darkMode}
         />
         {isAuthenticated ? (
-          <div>Authenticated buttons</div>
+          <AuthenticatedButtons />
         ) : (
-          <div>Unauthenticated buttons</div>
+          <UnauthenticatedButtons />
         )}
       </Toolbar>
     </AppBar>
