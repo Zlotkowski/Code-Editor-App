@@ -59,11 +59,10 @@ const useStyles = makeStyles((theme) => ({
   },
   treeItem: {
     padding: "2px",
-    color: "#ffffff",
+    color: theme.font,
   },
   emptyMessage: {
-    // color: theme.font,
-    color: "#ffffff",
+    color: theme.font,
   },
 }));
 

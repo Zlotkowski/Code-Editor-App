@@ -7,6 +7,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Loading from "../components/common/Loading/Loading";
 import Header from "../components/common/Header/Header";
 import Home from "../pages/Home/Home";
+import CodeEditor from "../pages/CodeEditor/CodeEditor";
 
 // bug => ./src/App.tsx
 // Cannot find file: 'AppRoutes.ts' does not match the corresponding name on disk: '.\src\routes\routes.ts'.
@@ -15,7 +16,6 @@ import Home from "../pages/Home/Home";
 const AppRoutes = () => {
   const { isAuthenticated, isLoading } = useAuth0();
   const classes = useStyles();
-  const CodeEditor = () => <div>Code Editor App</div>;
   if (isLoading) {
     return <Loading />;
   }
