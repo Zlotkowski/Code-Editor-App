@@ -39,8 +39,8 @@ const FileViewer = () => {
   if (!Object.keys(fileViewerData).length) {
     return (
       <div className={classes.emptyMessage}>
-        No files :( Please, add some folder from your computer with supported
-        extensions
+        No files :( Please, <strong>OPEN WORKSPACE </strong>and add some folder
+        from your computer with supported extensions
       </div>
     );
   }
