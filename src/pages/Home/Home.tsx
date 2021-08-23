@@ -7,7 +7,14 @@ const Home = () => {
   return (
     <div className={classes.root}>
       <div className={classes.welcomeMessage}>
-        Welcome to the Code Editor App
+        Welcome to the Code Editor App Stranger.{" "}
+        <strong>
+          Example data to Sign In to App: Email adress: test@gmail.com,
+          Password: Test1234! It's only auth0 :)
+        </strong>{" "}
+        Please, open workspace, add some file with extensions bottom and try it!{" "}
+        <br />
+        Ps. working only auto-save :)
       </div>
       <ProgrammingLanguagesList />
     </div>
@@ -24,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.background,
   },
   welcomeMessage: {
+    textAlign: "center",
     padding: "15px",
     fontSize: "30px",
     color: theme.font,

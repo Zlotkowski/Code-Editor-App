@@ -15,7 +15,11 @@ const EditorContainer = () => {
   );
   const activeFilesIds = useAppSelector((state) => state.files.activeFiles);
   if (!activeFiles.length) {
-    return <div className={classes.emptyMessage}>Select a file</div>;
+    return (
+      <div className={classes.emptyMessage}>
+        Select a file, double click to open
+      </div>
+    );
   }
   const onTabClick = (event: ChangeEvent<{}>, tabPosition: number) => {
     const activeFileId = activeFilesIds[tabPosition];
