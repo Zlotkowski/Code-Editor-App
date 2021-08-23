@@ -7,3 +7,5 @@ Technologies used:
 * Material UI
 * Authentication with Auth0
 * Testing business logic with Jest
+
+[Link to app in heroku](https://zlotkowski-code-editor-app.herokuapp.com/) Be Fun!
